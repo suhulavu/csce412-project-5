@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link id="mainStyleSheet" rel="stylesheet" href="style2.css">
+        <script src="functions.js"></script>
+    </head>
+
+
+    <body>
+        <!-- navigation bar -->
+        <div class="topnav">
+            <div class="left">
+                <a href="index.html">HOME</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="qualifications.html">QUALIFICATIONS</a>
+                <a href="service.html">SERVICE</a>
+                <a href="ai.html">AI</a>
+            </div>
+            <div class="right">
+                <button class="button" type="button" onclick="toggleStyleSheet()">Toggle Style</button>
+            </div>
+        </div>
+
+
+        <!-- banner -->
+        <div class="header">
+            <h1>PORTFOLIO</h1>
+        </div>
+        
+
+        <!-- project description 1 -->
+        <div class="content">
+            <div class="side_image">
+                <img src="attachments/book_recommender.png" alt="Image Description">
+            </div>
+            <div class="text">
+                <h2>Book Recommender System</h2>
+                <p>This project involved the development of a hybrid recommendation system designed to provide book recommendations 
+                    by combining collaborative filtering and content-based filtering approaches. The project leveraged the goodbooks-10k dataset, 
+                    comprising six million ratings for ten thousand popular books on Goodreads, complete with metadata, tags, shelves, and genres. To enhance the content-based 
+                    filtering aspect, book descriptions were scraped from Goodreads using the BeautifulSoup library. The collaborative filtering component employed the NeuMF 
+                    model in TensorFlow, which combines matrix factorization and neural collaborative filtering techniques. The content-based filtering utilized TF-IDF 
+                    vectorization and an autoencoder model for dimensionality reduction, facilitating book similarity calculations via cosine similarity. A hybrid recommender 
+                    system was established by clustering each book's learned embeddings from both approaches using K-Means. When users requested book recommendations, 
+                    candidates were selected from these clusters, and cosine similarity scores were aggregated across the three embedding spaces. Ultimately, the top "K" 
+                    book recommendations were generated based on these ranked scores, offering users a personalized reading list. This comprehensive approach ensured that 
+                    users received tailored book recommendations, enriching their reading experience based on both collaborative and content-based preferences.</p>
+                <div class="links">
+                    <a href="https://github.com/suhulavu/Book-Recommender-System" target="_blank">Repository</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- project description 2-->
+        <div class="content">
+            <div class="side_image">
+                <img src="attachments/stock.png" alt="Image Description">
+            </div>
+            <div class="text">
+                <h2>Stock Forecasting</h2>
+                <p>This project aimed to analyze and predict the closing price and volatility of stocks from Microsoft, Apple, Tesla, and Meta. 
+                    I started by fetching raw stock price data using the Yahoo Finance Python library and then determining the order of differencing required to 
+                    achieve stationarity using the Augmented Dickey-Fuller (ADF) test. The selection of optimal parameters for the ARIMA model was guided by PACF 
+                    and ACF plots, with AIC serving as the criterion for parameter selection. Post-model training, thorough analysis of residuals was conducted 
+                    through diagnostic plots and statistical tests, including the Ljung-Box test for autocorrelation and the Breusch-Pagan test for heteroskedasticity. 
+                    In cases where results indicated variance changes over time, the GARCH model was employed to capture the volatility of returns. This multifaceted 
+                    approach involved statistical testing, ARIMA modeling, GARCH modeling, and data visualization, with dependencies on libraries such as yfinance, 
+                    matplotlib, statsmodels, pandas, scikit-learn, arch, and tqdm. The project's objective was to provide insights into stock price movements and 
+                    volatility, aiding in more informed investment decisions.</p>
+                <div class="links">
+                    <a href="https://github.com/suhulavu/Stock-Forecasting" target="_blank">Repository</a>
+                    <a href="https://suhulavu.github.io/Stock-Forecasting/" target="_blank">Results</a>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
